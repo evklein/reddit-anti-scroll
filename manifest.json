@@ -1,0 +1,28 @@
+{
+    "name": "Reddit Anti-scroll",
+    "description": "Disable the scroll-heavy pages in Reddit, without disabling the site",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "ras.html",
+        "default_icon": "images/ras.png"
+    },
+    "icons": {
+        "16": "images/ras.png",
+        "32": "images/ras.png",
+        "48": "images/ras.png",
+        "128": "images/ras.png"
+    },
+    "content_scripts": [
+        {
+            "js": ["scripts/content.js"],
+            "matches": [
+                "https://www.reddit.com/",
+                "https://www.reddit.com/r/*/"
+            ],
+            "exclude_matches": [
+                "https://www.reddit.com/r/*/comments/*"
+            ]
+        }
+    ]
+}

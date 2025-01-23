@@ -1,0 +1,1 @@
+document.getElementById('subgrid-container').style.display = 'none';
